@@ -1,0 +1,5 @@
+package by.bsu.aircompany.enums;
+
+public enum ExperimentalType {
+    LIFTING_BODY, HYPERSONIC, HIGH_ALTITUDE, VTOL
+}
