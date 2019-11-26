@@ -2,3 +2,6 @@
 *.db
 /target
 /bin
+*.iml
+.idea/
+out/
