@@ -1,7 +1,9 @@
-*.log
 *.db
-/target
-/bin
+*.log
+
+target/ 
+bin/
+
 *.iml
 .idea/
 out/
