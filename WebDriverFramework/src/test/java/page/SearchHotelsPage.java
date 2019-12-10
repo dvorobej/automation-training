@@ -12,7 +12,7 @@ public class SearchHotelsPage extends AbstractPage {
 
 
 
-    private final By displaySortingListButton = By.xpath("//*[@class="sortBy Link chevrons _iaf _ix7 _mou _h-Y _imx"]");
+    private final By displaySortingListButton = By.xpath("//*[@class=\"sortBy Link chevrons _iaf _ix7 _mou _h-Y _imx\"]");
     private final By sortByPriceHighToLowButton = By.xpath("//*[@aria-label=\"Price (high to low)\"]");
     private final By sortByPriceLowToHighButton = By.xpath("//*[@aria-label=\"Price (low to high)\"]");
     private final By firstHighPrice = By.xpath("//*[@id=\"4303920-booking-price\"]");
