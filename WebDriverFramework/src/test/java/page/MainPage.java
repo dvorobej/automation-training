@@ -97,9 +97,9 @@ public class MainPage extends AbstractPage
 
     public MainPage changeCurrencyToEuro()
     {
-        waitForTheElement(buttonChangeCurrency).click();
-        euroCurrencySign.click();
-        waitForTheElement(changeCurrencyThisVisit).click();
+        waitForTheVisibleElement(waitForTheElement(buttonChangeCurrency)).click();
+        waitForTheVisibleElement(euroCurrencySign).click();
+        waitForTheVisibleElement(waitForTheElement(changeCurrencyThisVisit)).click();
         logger.info("Change currency to euro");
         return new MainPage(driver);
     }
