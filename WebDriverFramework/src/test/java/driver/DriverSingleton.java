@@ -20,11 +20,18 @@ public class DriverSingleton {
                     driver = new FirefoxDriver();
                 }
                 default: {
+                    ChromeOptions options = new ChromeOptions();
+                    options.addArguments("--disable-extensions");
+                    options.addArguments("--headless");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--window-size=1920,1080");
+
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    driver = new ChromeDriver(options);
                 }
             }
-            driver.manage().window().maximize();
+            //driver.manage().window().maximize();
         }
         return driver;
     }
