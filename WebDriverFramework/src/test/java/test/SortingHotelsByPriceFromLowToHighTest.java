@@ -7,7 +7,7 @@ import static org.testng.AssertJUnit.assertTrue;
 
 public class SortingHotelsByPriceFromLowToHighTest extends CommonCondition{
     @Test
-    public void seeWorkOfSortingHotelsByPriceFromHighToLow()
+    public void seeWorkOfSortingHotelsByPriceFromLowToHigh()
     {
         SearchHotelsPage hotelsPage = new SearchHotelsPage(driver)
                 .openPage()
