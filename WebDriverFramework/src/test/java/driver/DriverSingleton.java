@@ -20,8 +20,14 @@ public class DriverSingleton {
         if (null == driver) {
             switch (System.getProperty("browser")) {
                 case "firefox": {
+                    FirefoxOptions options = new FirefoxOptions();
+                    options.addArguments("--disable-extensions");
+                    options.addArguments("--headless");
+                    options.addArguments("--disable-gpu");
+                    options.addArguments("--no-sandbox");
+                    options.addArguments("--window-size=1920,1080");
                     WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
+                    driver = new FirefoxDriver(options);
                 }
                 default: {
                     ChromeOptions options = new ChromeOptions();
@@ -31,7 +37,7 @@ public class DriverSingleton {
                     options.addArguments("--no-sandbox");
                     options.addArguments("--window-size=1920,1080");
                     WebDriverManager.chromedriver().setup();
-                    driver = new ChromeDriver();
+                    driver = new ChromeDriver(options);
                 }
             }
             driver.manage().window().maximize();
