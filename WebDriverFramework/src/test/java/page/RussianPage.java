@@ -8,7 +8,7 @@ import static util.StringUtils.SITE_RUSSIANPAGE_URL;
 
 public class RussianPage extends AbstractPage
 {
-    private final By titleTickets = By.xpath("//*[@aria-label=\"Авиабилеты\"]");
+    private final By titleTickets = By.xpath("//*[@href='/flights']");
 
     public RussianPage(WebDriver driver)
     {
