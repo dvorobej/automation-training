@@ -25,7 +25,7 @@ public class DriverSingleton {
                     options.addArguments("--no-sandbox");
                     options.addArguments("--window-size=1920,1080");
                     WebDriverManager.firefoxdriver().setup();
-                    driver = new FirefoxDriver();
+                    driver = new FirefoxDriver(options);
                 }
                 default: {
                     ChromeOptions options = new ChromeOptions();
