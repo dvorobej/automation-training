@@ -36,7 +36,7 @@ public class MainPage extends AbstractPage
 
     private final By loginErrorMessage = By.xpath("/html/body/div[37]/div/div/div/div/div[2]/div[1]/div[5]/div[2]/b");
 
-    private final By userName = By.xpath("//*[@id='qkwH-account-name']");
+    private final By userName = By.xpath(""/html/body/div[1]/div[1]/header/div/div/div/div[3]/div/div[1]/div/div/div[2]/div/div/span"");
 
     public MainPage(WebDriver driver)
     {
