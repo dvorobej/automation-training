@@ -6,15 +6,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 import java.util.concurrent.TimeUnit;
 
 public class DriverSingleton {
     private static WebDriver driver;
 
-    protected final Logger logger = LogManager.getRootLogger();
 
     private DriverSingleton() {
     }
@@ -31,7 +29,6 @@ public class DriverSingleton {
                     options.addArguments("--window-size=1920,1080");
                     WebDriverManager.firefoxdriver().setup();
                     driver = new FirefoxDriver(options);
-                    logger.info("Start firefox driver");
                 }
                 default: {
                     ChromeOptions options = new ChromeOptions();
@@ -42,7 +39,6 @@ public class DriverSingleton {
                     options.addArguments("--window-size=1920,1080");
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(options);
-                    logger.info("Start chrome driver");
                 }
             }
         }
